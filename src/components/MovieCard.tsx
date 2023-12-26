@@ -1,10 +1,11 @@
 import Image from "next/image"
 
-const MovieCard = () => {
+const MovieCard = ({movie} : any) => {
+
+    console.log(movie , "movie")
   return (
     <div className="w-1/3">
-        <Image src={""}  alt="Image" fill />
-        Image
+        
     </div>
   )
 }
