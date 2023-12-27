@@ -9,13 +9,16 @@ export default function Home() {
   const { movies } = useMovies(searchMovie);
 
   return (
-    <main className="w-4/5 mx-auto flex gap-3">
+    <main className="custom-img h-[550px]">
+     <div className="w-4/5 mx-auto flex gap-10 flex-wrap  items-center justify-center">
+      
       {movies.map((movie) => (
-        <MovieCard key={movie?.id} movie = {movie}/>    
-       
+        <MovieCard key={movie?.id}  movie={movie}/>         
 
       ))}
+    </div>
     </main>
+ 
   );
      
 }

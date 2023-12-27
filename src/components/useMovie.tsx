@@ -29,7 +29,7 @@ export function useMovies(searchMovie: string | null) {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        /*   const response = await axios.get('https://api.themoviedb.org/3/search/movie/popular?api_key=84b407c4d68abcbbcd5d97262a8f0148', {
+      /*     const response = await axios.get('https://api.themoviedb.org/3/search/movie/popular?api_key=84b407c4d68abcbbcd5d97262a8f0148', {
           params: {
             api_key: process.env.NEXT_PUBLIC_API_KEY,
             query: searchMovie,
