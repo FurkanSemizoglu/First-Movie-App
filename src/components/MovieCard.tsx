@@ -1,9 +1,10 @@
 import axios from "axios";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const MovieCard = ({ movie }: any) => {
- /*  const [imageUrl, setImageUrl] = useState("");
+  /*  const [imageUrl, setImageUrl] = useState("");
   setImageUrl(`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`); */
 
   /*   useEffect(() => {
@@ -23,11 +24,23 @@ const MovieCard = ({ movie }: any) => {
   }, [movie?.id]);
  */
 
+  const router = useRouter();
   return (
-    <div className="w-1/5 h-[400px] relative my-5 ">
-      
-    
-      <img className="bg-cover h-[400px]" src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt="" />
+    <div
+     /*  onClick={() => {
+        router.push({ pathname: "/post/[pid]", query: { pid: movie?.id } });
+      }} */
+      //onClick={() => {router.push(`/movieDetails/${movie?.id}`)} }
+      onClick={() => {
+        router.push(`/movieDetails?id=${movie?.id}`);
+      }}
+      className="w-1/5 max-h-[400px] relative my-5 cursor-pointer transition ease-in-out hover:translate-y-1 hover:scale-110  duration-300"
+    >
+      <img
+        className="bg-cover max-h-[400px]"
+        src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
+        alt=""
+      />
 
       <div className="absolute bottom-0 text-white ">{movie?.title}</div>
     </div>

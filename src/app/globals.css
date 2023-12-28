@@ -9,14 +9,3 @@ html{
     background-attachment: fixed;
 }
 
-.hidden-text { 
-    visibility: hidden; 
-    opacity: 0; 
-    transition: visibility 0s, opacity 0.5s; 
-  } 
-   
-  /* Show the text on hover */ 
-.moive-container:hover .hidden-text { 
-    visibility: visible; 
-    opacity: 1; 
- } 
